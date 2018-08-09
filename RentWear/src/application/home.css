@@ -1,0 +1,15 @@
+#background{
+	
+	-fx-background-image: url("/images/home.jpg") ;
+}
+
+
+.button:hover {
+  -fx-background-color:#ec008c;
+}
+
+.button{
+   
+    -fx-background-color:  #3196de;
+    }
+    

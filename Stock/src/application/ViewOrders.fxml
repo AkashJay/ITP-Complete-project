@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="pan1" fx:id="pan1" prefHeight="600.0" prefWidth="1000.0" stylesheets="@background.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ViewOrders_C">
+   <children>
+      <TableView fx:id="Jtable_order" layoutX="20.0" layoutY="348.0" prefHeight="238.0" prefWidth="960.0" style="-fx-border-color: #ec008c; -fx-border-width: 5;">
+        <columns>
+          <TableColumn fx:id="Jcol_orderid" prefWidth="180.0" text="Order ID" />
+          <TableColumn fx:id="Jcol_Itemcode" prefWidth="177.0" text="Item Code" />
+            <TableColumn fx:id="Jcol_amount" prefWidth="140.0" text="Amount" />
+            <TableColumn fx:id="Jcol_cost" prefWidth="172.0" text="Cost" />
+            <TableColumn fx:id="Jcol_supplierid" prefWidth="156.0" text="Supplier ID" />
+            <TableColumn fx:id="Jcol_orderdate" prefWidth="168.0" text="Order Date" />
+        </columns>
+      </TableView>
+      <TitledPane animated="false" collapsible="false" layoutX="28.0" layoutY="38.0" prefHeight="291.0" prefWidth="535.0" text="Add Orders" textFill="#3196de">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="247.0" prefWidth="534.0">
+               <children>
+                  <Label layoutX="23.0" layoutY="75.0" prefHeight="17.0" prefWidth="72.0" text="Item ID" textFill="#ec008c">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="23.0" layoutY="25.0" prefHeight="17.0" prefWidth="63.0" text="Order ID" textFill="#ec008c">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="295.0" layoutY="25.0" prefHeight="17.0" prefWidth="66.0" text="Unit Cost" textFill="#ec008c">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="23.0" layoutY="172.0" prefHeight="17.0" prefWidth="75.0" text="Supplier ID" textFill="#ec008c">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="23.0" layoutY="124.0" prefHeight="17.0" prefWidth="73.0" text="Quantity" textFill="#ec008c">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="295.0" layoutY="75.0" prefHeight="17.0" prefWidth="70.0" text="Total Cost" textFill="#ec008c">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="295.0" layoutY="124.0" prefHeight="17.0" prefWidth="68.0" text="Order Date" textFill="#ec008c">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="Jtxt_orderid" editable="false" layoutX="95.0" layoutY="20.0" onAction="#Jtxt_orderid" />
+                  <TextField fx:id="Jtxt_itemid" layoutX="95.0" layoutY="70.0" onAction="#Jtxt_itemid" />
+                  <TextField fx:id="Jtxt_quantity" layoutX="95.0" layoutY="119.0" onAction="#Jtxt_quantity" />
+                  <TextField fx:id="Jtxt_suppplierid" layoutX="95.0" layoutY="167.0" onAction="#Jtxt_suppplierid" />
+                  <TextField fx:id="Jtxt_cost" layoutX="365.0" layoutY="20.0" onAction="#Jtxt_cost" />
+                  <TextField fx:id="Jtxt_totcost" editable="false" layoutX="366.0" layoutY="70.0" />
+                  <DatePicker fx:id="Jdate_orderdate" layoutX="365.0" layoutY="119.0" prefHeight="27.0" prefWidth="155.0" />
+                  <JFXButton fx:id="Jbtn_order" layoutX="237.0" layoutY="219.0" onAction="#btn_order" prefHeight="27.0" prefWidth="96.0" style="-fx-background-color: #3196DE;" text="Order" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+        </content>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="567.0" layoutY="38.0" prefHeight="291.0" prefWidth="414.0" text="Send Request" textFill="#3196de">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="15.0" layoutY="36.0" prefHeight="17.0" prefWidth="138.0" text="Supplier Email" textFill="#ec008c">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="94.0" prefHeight="17.0" prefWidth="38.0" text="Path" textFill="#ec008c">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="13.0" layoutY="160.0" prefHeight="17.0" prefWidth="85.0" text="Message" textFill="#ec008c">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="Jbtn_email" layoutX="43.0" layoutY="219.0" onAction="#btn_email" prefHeight="27.0" prefWidth="81.0" style="-fx-background-color: #3196DE;" text="Send Email" textFill="WHITE" />
+                  <TextField fx:id="Jtxt_supemail" editable="false" layoutX="163.0" layoutY="31.0" prefHeight="25.0" prefWidth="235.0" />
+                  <TextField fx:id="Jtxt_path" editable="false" layoutX="153.0" layoutY="89.0" prefHeight="27.0" prefWidth="198.0" />
+                  <JFXButton fx:id="Jbtn_chhose" layoutX="350.0" layoutY="102.0" onAction="#btn_choose" prefHeight="8.0" prefWidth="33.0" style="-fx-background-color: #3196DE;" text="..." textFill="WHITE" />
+                  <TextArea fx:id="Jtxt_msg" layoutX="152.0" layoutY="156.0" prefHeight="85.0" prefWidth="236.0" />
+               </children>
+            </AnchorPane>
+        </content>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TitledPane>
+   </children>
+</AnchorPane>

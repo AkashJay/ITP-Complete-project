@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ViewSuppliers_C">
+   <children>
+      <TableView fx:id="Jtable_supplierss" layoutX="23.0" layoutY="364.0" prefHeight="211.0" prefWidth="959.0" style="-fx-border-color: #ec008c; -fx-border-width: 5;">
+        <columns>
+          <TableColumn fx:id="Jcol_suppplierid" prefWidth="78.0" text="Supplier ID" />
+          <TableColumn fx:id="Jcol_fname" prefWidth="125.0" text="Supplier First Name" />
+            <TableColumn fx:id="Jcol_lname" prefWidth="121.0" text="Supplier Last Name" />
+            <TableColumn fx:id="Jcol_address" prefWidth="91.0" text="Address" />
+            <TableColumn fx:id="Jcol_dob" prefWidth="56.0" text="DOB" />
+            <TableColumn fx:id="Jcol_gender" prefWidth="58.0" text="Gender" />
+            <TableColumn fx:id="Jcol_email" prefWidth="104.0" text="Email" />
+            <TableColumn fx:id="Jcol_phone" prefWidth="81.0" text="Phone No" />
+            <TableColumn fx:id="Jcol_nic" prefWidth="91.0" text="NIC" />
+            <TableColumn fx:id="Jcol_compnyname" prefWidth="157.0" text="Company Name" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="Jbtn_home" buttonType="RAISED" layoutX="925.0" layoutY="21.0" onAction="#btn_home" text=" " />
+      <TitledPane animated="false" collapsible="false" layoutX="23.0" layoutY="39.0" prefHeight="316.0" prefWidth="959.0" text="Add Supplier" textFill="#3196de">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="290.0" prefWidth="946.0">
+               <children>
+                  <Label layoutX="11.0" layoutY="17.0" text="Supplier ID" textFill="#ec008c">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="191.0" text="Email" textFill="#ec008c">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="12.0" layoutY="50.0" text="Supplier First Name" textFill="#ec008c">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="225.0" prefHeight="17.0" prefWidth="109.0" text="Telephone number" textFill="#ec008c">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="11.0" layoutY="153.0" prefHeight="16.0" prefWidth="59.0" text="DOB" textFill="#ec008c">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="12.0" layoutY="117.0" prefHeight="17.0" prefWidth="48.0" text="Gender" textFill="#ec008c">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="13.0" layoutY="82.0" text="Supplier Last Name" textFill="#ec008c">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="505.0" layoutY="50.0" text="Address" textFill="#ec008c">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="505.0" layoutY="17.0" text="Company Name" textFill="#ec008c">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="251.0" text="NIC no" textFill="#ec008c">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="Jtxt_address" layoutX="614.0" layoutY="49.0" onDragDetected="#Jtxt_address" prefHeight="71.0" prefWidth="152.0" promptText="Address" />
+                  <TextField fx:id="Jtxt_lname" layoutX="203.0" layoutY="78.0" onAction="#Jtxt_lname" promptText="Supplier Last Name" />
+                  <TextField fx:id="Jtxt_fname" layoutX="203.0" layoutY="46.0" onAction="#Jtxt_fname" promptText="Supplier First Name" />
+                  <TextField fx:id="Jtxt_tno" layoutX="202.0" layoutY="221.0" onAction="#Jtxt_tno" promptText="Telephone number" />
+                  <TextField fx:id="Jtxt_nic" layoutX="204.0" layoutY="256.0" onAction="#Jtxt_nic" promptText="NIC no" />
+                  <TextField fx:id="Jtxt_email" layoutX="204.0" layoutY="187.0" onAction="#Jtxt_email" promptText="Email" />
+                  <TextField fx:id="Jtxt_cname" layoutX="615.0" layoutY="13.0" onAction="#Jtxt_cname" promptText="Company Name" />
+                  <ComboBox fx:id="Jcombo_gender" layoutX="203.0" layoutY="113.0" prefWidth="150.0" />
+                  <DatePicker fx:id="Jdate_dob" layoutX="202.0" layoutY="149.0" prefHeight="25.0" prefWidth="152.0" />
+                  <JFXButton fx:id="Jbtn_submit" buttonType="RAISED" layoutX="865.0" layoutY="34.0" onAction="#btn_submit" style="-fx-background-color: #3196DE;" text="Submit" textFill="WHITE" />
+                  <TextField fx:id="Jtxt_supplierid" layoutX="204.0" layoutY="14.0" onAction="#Jtxt_supplierid" />
+               </children>
+            </AnchorPane>
+         </content>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TitledPane>
+   </children>
+</AnchorPane>

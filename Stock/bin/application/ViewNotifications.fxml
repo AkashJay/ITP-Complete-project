@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="pan1" prefHeight="600.0" prefWidth="1000.0" stylesheets="@background.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ViewNotificationsController">
+   <children>
+      <TabPane layoutX="36.0" layoutY="59.0" prefHeight="535.0" prefWidth="925.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Stock Notification">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="Jtbl_stocknoti" layoutX="111.0" layoutY="14.0" prefHeight="446.0" prefWidth="785.0">
+                          <columns>
+                            <TableColumn fx:id="Jcol_subid" prefWidth="180.0" text="SubCategory ID" />
+                            <TableColumn fx:id="Jcol_subname" prefWidth="168.0" text="Sub Category Name" />
+                              <TableColumn fx:id="Jcol_catid" prefWidth="120.0" text="Category ID" />
+                              <TableColumn fx:id="Jcol_minquantity" prefWidth="139.0" text="Min Quantity" />
+                              <TableColumn fx:id="Jcol_maxquantity" prefWidth="181.0" text="Max Quatity" />
+                          </columns>
+                        </TableView>
+                        <JFXButton fx:id="Jbtn_remove" buttonType="RAISED" layoutX="837.0" layoutY="467.0" onAction="#btn_remove" style="-fx-background-color: #3196DE;" text="Remove" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Expire Items">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="Jtbl_expire" layoutX="129.0" layoutY="29.0" prefHeight="428.0" prefWidth="479.0">
+                          <columns>
+                            <TableColumn fx:id="Jcol_item" prefWidth="262.0" text="Item Code" />
+                            <TableColumn fx:id="Jcol_date" prefWidth="337.0" text="Expired date" />
+                          </columns>
+                        </TableView>
+                        <JFXButton fx:id="Jbtn_remove1" buttonType="RAISED" layoutX="806.0" layoutY="457.0" onAction="#sen" style="-fx-background-color: #3196DE;" text="Notify" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="328.0" prefWidth="393.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ForgetController">
+   <children>
+      <Pane id="pane12" fx:id="pane12" layoutX="8.0" layoutY="9.0" prefHeight="311.0" prefWidth="376.0" style="-fx-background-color: white; -fx-border-radius: 50px; -fx-border-color: #7da7b1;" stylesheets="@log.css">
+         <children>
+            <JFXTextField fx:id="txteid" focusColor="#7da7b1" labelFloat="true" layoutX="72.0" layoutY="118.0" onAction="#user" prefHeight="25.0" prefWidth="228.0" promptText="Employee ID" unFocusColor="#7da7b1" />
+            <Label alignment="CENTER" layoutX="158.0" layoutY="4.0" prefHeight="45.0" prefWidth="51.0" style="-fx-border-color: #7da7b1; -fx-border-width: 2; -fx-border-radius: 50px;" text="D" textFill="#7da7b1">
+               <font>
+                  <Font name="Microsoft JhengHei Light" size="34.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="68.0" layoutY="64.0" text="                    Shop now at Dressmo.&#10; The best shopping destination in Sri Lanka" textFill="#1d1e1edb" />
+            <JFXTextField fx:id="txtuser" focusColor="#7da7b1" labelFloat="true" layoutX="72.0" layoutY="156.0" onAction="#phone" prefHeight="25.0" prefWidth="228.0" promptText="Username" unFocusColor="#7da7b1" />
+            <JFXTextField fx:id="txtphone" focusColor="#7da7b1" labelFloat="true" layoutX="73.0" layoutY="194.0" prefHeight="25.0" prefWidth="228.0" promptText="Phone Number" unFocusColor="#7da7b1" />
+            <Label fx:id="lblerror" layoutX="54.0" layoutY="224.0" prefHeight="34.0" prefWidth="318.0" />
+            <JFXButton fx:id="btnsend" buttonType="RAISED" layoutX="77.0" layoutY="263.0" onAction="#forget" prefHeight="34.0" prefWidth="106.0" style="-fx-background-color: #7da7b1 #7da7b1; -fx-background-radius: 50px;" text="Send" />
+            <JFXButton fx:id="btnback" buttonType="RAISED" layoutX="194.0" layoutY="263.0" onAction="#back" prefHeight="34.0" prefWidth="106.0" style="-fx-background-color: #7da7b1 #7da7b1; -fx-background-radius: 50px;" text="Exit" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

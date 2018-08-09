@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/A C E R/Desktop/jfoenix.jar"/>
+	<classpathentry kind="lib" path="C:/Users/A C E R/Desktop/library/mysql-connector-java-5.1.42.jar"/>
+	<classpathentry kind="lib" path="C:/Users/A C E R/Desktop/RentWear/Bulk_SMS_Library.jar"/>
+	<classpathentry kind="lib" path="C:/Users/A C E R/Desktop/RentWear/mysql-connector-java-5.1.42.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/workspace/RentWear/Bulk_SMS_Library.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/workspace/RentWear/mysql-connector-java-5.1.42.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/workspace/RentWear/jfoenix.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

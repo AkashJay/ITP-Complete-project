@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="pan1" prefHeight="600.0" prefWidth="1000.0" stylesheets="@background.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ViewStockController">
+   <children>
+      <TabPane layoutX="31.0" layoutY="14.0" prefHeight="573.0" prefWidth="938.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Gents">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="Jtable_gents" layoutX="19.0" layoutY="101.0" prefHeight="420.0" prefWidth="907.0" style="-fx-border-color: #ec008c; -fx-border-width: 5;">
+                          <columns>
+                            <TableColumn fx:id="Jcol_Gitemcode" prefWidth="87.0" text="Item_Code" />
+                            <TableColumn fx:id="Jcol_Gitemname" prefWidth="86.0" text="Item_Name" />
+                              <TableColumn fx:id="Jcol_Gbrandid" prefWidth="91.0" text="Brand_id" />
+                              <TableColumn fx:id="Jcol_Gquantity" prefWidth="59.0" text="Quantity" />
+                              <TableColumn fx:id="Jcol_Gbuyingprice" prefWidth="101.0" text="Buying_Price" />
+                              <TableColumn fx:id="Jcol_Gsellingprice" prefWidth="97.0" text="Selling_Price" />
+                              <TableColumn fx:id="Jcol_Gcolor" prefWidth="73.0" text="Color" />
+                              <TableColumn fx:id="Jcol_Gsize" prefWidth="70.0" text="Size " />
+                              <TableColumn fx:id="Jcol_Gsubcategoryid" prefWidth="115.0" text="Sub_Category ID" />
+                              <TableColumn fx:id="Jcol_Gadddate" prefWidth="117.0" text="Add_Date" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="23.0" layoutY="58.0" text="Sub Category" textFill="#3196de">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <Label layoutX="446.0" layoutY="57.0" text="Search" textFill="#3196de">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <TextField fx:id="Jtxt_search" layoutX="501.0" layoutY="56.0" prefHeight="25.0" prefWidth="419.0" />
+                        <ComboBox fx:id="Jcombo_Gsub" layoutX="138.0" layoutY="55.0" onAction="#Gcombochanged" prefHeight="25.0" prefWidth="250.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Women">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="Jtable_women" layoutX="21.0" layoutY="110.0" prefHeight="420.0" prefWidth="914.0" style="-fx-border-width: 5; -fx-border-color: #ec008c;">
+                          <columns>
+                            <TableColumn fx:id="Jcol_Witemcode" prefWidth="75.0" text="Item_Code" />
+                            <TableColumn fx:id="Jcol_Witemname" prefWidth="112.0" text="Item Name" />
+                              <TableColumn fx:id="Jcol_Wbrandid" text="Brand ID" />
+                              <TableColumn fx:id="Jcol_Wquantity" prefWidth="71.0" text="Quantity" />
+                              <TableColumn fx:id="Jcol_Wbuyingprice" text="Buying Price" />
+                              <TableColumn fx:id="Jcol_Wsellingprice" prefWidth="134.0" text="Selling Price" />
+                              <TableColumn fx:id="Jcol_Wcolor" minWidth="6.0" prefWidth="72.0" text="Color" />
+                              <TableColumn fx:id="Jcol_Wsize" prefWidth="69.0" text="Size" />
+                              <TableColumn fx:id="Jcol_Wsubcategoryid" prefWidth="120.0" text="Sub_Categoryid" />
+                              <TableColumn fx:id="Jcol_Wadddate" minWidth="0.0" prefWidth="90.0" text="Add_Date" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="Jtxt_wsearch" layoutX="530.0" layoutY="67.0" prefHeight="25.0" prefWidth="397.0" />
+                        <Label layoutX="27.0" layoutY="69.0" text="Sub category" textFill="#3196de">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <Label layoutX="476.0" layoutY="69.0" text="Search" textFill="#3196de">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <ComboBox fx:id="Jcombo_Wsub" layoutX="146.0" layoutY="67.0" onAction="#Wcombochanged" prefHeight="25.0" prefWidth="260.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Kids">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="Jtable_kids" layoutX="20.0" layoutY="115.0" prefHeight="420.0" prefWidth="916.0" style="-fx-border-color: #ec008c; -fx-border-width: 5;">
+                          <columns>
+                            <TableColumn fx:id="Jcol_Kitemid" prefWidth="75.0" text="Item_Code" />
+                            <TableColumn fx:id="Jcol_Kitemname" prefWidth="75.0" text="Item_Name" />
+                              <TableColumn fx:id="Jcol_Kbrandid" prefWidth="75.0" text="Brand ID" />
+                              <TableColumn fx:id="Jcol_Kquantity" prefWidth="75.0" text="Quantity" />
+                              <TableColumn fx:id="Jcol_Kbuyingprice" prefWidth="108.0" text="Buying Price" />
+                              <TableColumn fx:id="Jcol_Ksellingprice" prefWidth="95.0" text="Selling Price" />
+                              <TableColumn fx:id="Jcol_Kcolor" minWidth="0.0" prefWidth="124.0" text="Color" />
+                              <TableColumn fx:id="Jcol_Ksize" prefWidth="85.0" text="Size" />
+                              <TableColumn fx:id="Jcol_Ksubcategory" prefWidth="88.0" text="Sub_Category" />
+                              <TableColumn fx:id="Jcol_Kadddate" prefWidth="103.0" text="Add_Date" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="40.0" layoutY="67.0" text="Sub category" textFill="#3196de">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <Label layoutX="482.0" layoutY="69.0" text="Search" textFill="#3196de">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <TextField fx:id="Jtxt_ksearch" layoutX="551.0" layoutY="65.0" prefHeight="25.0" prefWidth="376.0" />
+                        <ComboBox fx:id="Jcombo_Ksub" layoutX="143.0" layoutY="65.0" onAction="#kcombochanged" prefHeight="25.0" prefWidth="271.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Cosmetics">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="Jtable_cosmetics" layoutX="18.0" layoutY="90.0" prefHeight="444.0" prefWidth="915.0" style="-fx-border-color: #ec008c; -fx-border-width: 5;">
+                          <columns>
+                            <TableColumn fx:id="Jcol_Citemid" prefWidth="75.0" text="Item_Code" />
+                            <TableColumn fx:id="Jcol_Citemname" prefWidth="116.0" text="Item_Name" />
+                              <TableColumn fx:id="Jcol_Cbrandid" prefWidth="73.0" text="Brand_ID" />
+                              <TableColumn fx:id="Jcol_Cquantity" prefWidth="89.0" text="Quantity" />
+                              <TableColumn fx:id="Jcol_Cbuyingprice" prefWidth="96.0" text="Buying Price" />
+                              <TableColumn fx:id="Jcol_Csellingprice" prefWidth="103.0" text="Selling Price" />
+                              <TableColumn fx:id="Jcol_Ccolor" prefWidth="87.0" text="Color" />
+                              <TableColumn fx:id="Jcol_Csubcategory" prefWidth="110.0" text="Sub_CategoryID" />
+                              <TableColumn fx:id="Jcol_Cadddate" prefWidth="152.0" text="Add_Date" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="37.0" layoutY="45.0" text="Search" textFill="#3196de">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <TextField fx:id="Jtxt_csearch" layoutX="97.0" layoutY="43.0" prefHeight="25.0" prefWidth="823.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

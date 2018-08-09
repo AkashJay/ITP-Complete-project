@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pan1" prefHeight="600.0" prefWidth="1000.0" stylesheets="@background.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SalesAnalysisController">
+   <children>
+      <TitledPane animated="false" layoutX="12.0" layoutY="58.0" prefHeight="491.0" prefWidth="483.0" text="Category wise Sales" textFill="#3196de">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="329.0" prefWidth="548.0">
+               <children>
+                  <PieChart fx:id="Jgraph_cat" layoutX="11.0" layoutY="56.0" prefHeight="394.0" prefWidth="456.0" />
+                  <JFXButton fx:id="Jbtn_gen" buttonType="RAISED" layoutX="406.0" layoutY="17.0" onAction="#genarete_piechart" style="-fx-background-color: #3196DE;" text="Generate" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+        </content>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="500.0" layoutY="58.0" prefHeight="491.0" prefWidth="483.0" text="Sub-Category wise" textFill="#3196de">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="329.0" prefWidth="548.0">
+               <children>
+                  <PieChart fx:id="Jgraph_scat" layoutX="14.0" layoutY="57.0" prefHeight="397.0" prefWidth="459.0" />
+                  <JFXButton fx:id="Jbtn_gen1" buttonType="RAISED" layoutX="390.0" layoutY="18.0" onAction="#genarete_piechart1" style="-fx-background-color: #3196DE;" text="Generate" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <JFXButton fx:id="Jbtn_reports" buttonType="RAISED" layoutX="858.0" layoutY="561.0" onAction="#btn_reports" style="-fx-background-color: #3196DE;" text="Reports" textFill="WHITE" />
+   </children>
+</AnchorPane>

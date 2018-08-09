@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.wearController">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="1000.0">
+         <top>
+            <AnchorPane prefHeight="46.0" prefWidth="1000.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="12.0" layoutY="11.0" text="Wear Details" textFill="#ec008c">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="526.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TabPane prefHeight="554.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <tabs>
+                        <Tab text="Add New Items">
+                           <content>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXButton layoutX="807.0" layoutY="326.0" prefHeight="42.0" prefWidth="131.0" style="-fx-background-radius: 10px;" stylesheets="@Button.css" text="Update" />
+                                    <JFXButton layoutX="640.0" layoutY="415.0" prefHeight="42.0" prefWidth="123.0" style="-fx-background-radius: 10px;" stylesheets="@Button.css" text="Delete" />
+                                    <JFXButton layoutX="816.0" layoutY="415.0" onAction="#clearData" prefHeight="42.0" prefWidth="131.0" style="-fx-background-radius: 10px;" stylesheets="@Button.css" text="Clear" />
+                                    <JFXTextField fx:id="txtwcode" focusColor="#ec008c" labelFloat="true" layoutX="42.0" layoutY="53.0" onAction="#grab2" prefHeight="29.0" prefWidth="230.0" promptText="Item Code" unFocusColor="#3196dc" />
+                                    <JFXTextField fx:id="txtwname" focusColor="#ec008c" labelFloat="true" layoutX="40.0" layoutY="153.0" onAction="#grab3" prefHeight="29.0" prefWidth="233.0" promptText="name" unFocusColor="#3196dc" />
+                                    <JFXTextField fx:id="txtwmat" focusColor="#ec008c" labelFloat="true" layoutX="40.0" layoutY="242.0" onAction="#grab4" onDragDetected="#grab4" prefHeight="29.0" prefWidth="233.0" promptText="Material" unFocusColor="#3196dc" />
+                                    <JFXTextField fx:id="txtwsize" focusColor="#ec008c" labelFloat="true" layoutX="40.0" layoutY="347.0" onAction="#grab5" prefHeight="29.0" prefWidth="233.0" promptText="Size" unFocusColor="#3196dc" />
+                                    <JFXComboBox fx:id="comcat" focusColor="#ec008c" layoutX="344.0" layoutY="53.0" onAction="#grab6" prefHeight="31.0" prefWidth="213.0" promptText="Category" unFocusColor="#3196dc" />
+                                    <JFXTextField fx:id="txtwrentfee" focusColor="#ec008c" labelFloat="true" layoutX="344.0" layoutY="168.0" onAction="#grab7" prefHeight="29.0" prefWidth="230.0" promptText="Rent fee (Per Day)" unFocusColor="#3196dc" />
+                                    <JFXTextField fx:id="txtwlatefee" focusColor="#ec008c" labelFloat="true" layoutX="340.0" layoutY="257.0" onAction="#grab8" prefHeight="29.0" prefWidth="230.0" promptText="Late fee (Per Day)" unFocusColor="#3196dc" />
+                                    <JFXTextField fx:id="txtwcost" focusColor="#ec008c" labelFloat="true" layoutX="339.0" layoutY="353.0" onAction="#grab9" prefHeight="29.0" prefWidth="230.0" promptText="Wear Cost" unFocusColor="#3196dc" />
+                                    <JFXTextField fx:id="txtwsupplier" focusColor="#ec008c" labelFloat="true" layoutX="701.0" layoutY="64.0" onAction="#grab10" prefHeight="29.0" prefWidth="230.0" promptText="Supplier" unFocusColor="#3196dc" />
+                                    <JFXTextField fx:id="txtwdes" focusColor="#ec008c" layoutX="701.0" layoutY="149.0" prefHeight="94.0" prefWidth="211.0" promptText="Wear Description" unFocusColor="#3196dc" />
+                                    <StackPane fx:id="stack2" layoutX="433.0" layoutY="116.0" prefHeight="33.0" prefWidth="43.0" />
+                                    <JFXButton layoutX="640.0" layoutY="326.0" onAction="#addWear" prefHeight="42.0" prefWidth="131.0" style="-fx-background-radius: 10px;" stylesheets="@Button.css" text="Add" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Search Items">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="461.0" prefWidth="1000.0">
+                                 <children>
+                                    <TableView fx:id="wearTable" layoutX="11.0" layoutY="97.0" prefHeight="327.0" prefWidth="981.0">
+                                       <columns>
+                                          <TableColumn fx:id="twcode" prefWidth="86.0" text="Wear Code" />
+                                          <TableColumn fx:id="twname" prefWidth="102.0" text="Name" />
+                                          <TableColumn fx:id="tcat" prefWidth="94.0" text="Category" />
+                                          <TableColumn fx:id="tmat" prefWidth="100.0" text="Material " />
+                                          <TableColumn fx:id="twsize" prefWidth="67.0" text="Size" />
+                                          <TableColumn fx:id="twrentfee" prefWidth="94.0" text="Rent Price" />
+                                          <TableColumn fx:id="twlatefee" prefWidth="90.0" text="Late  Fee" />
+                                          <TableColumn fx:id="twstatus" prefWidth="99.0" text="Status" />
+                                          <TableColumn fx:id="twsupplier" prefWidth="98.0" text="no Of byers" />
+                                          <TableColumn fx:id="twdes" prefWidth="145.0" text="Income" />
+                                       </columns>
+                                    </TableView>
+                                    <JFXTextField fx:id="txtwsearch" focusColor="#ec008c" labelFloat="true" layoutX="27.0" layoutY="35.0" prefHeight="29.0" prefWidth="291.0" promptText="Search Wear" unFocusColor="#3196dc">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXButton buttonType="RAISED" layoutX="344.0" layoutY="34.0" prefHeight="31.0" prefWidth="72.0" style="-fx-background-radius: 10px;" stylesheets="@Button.css" text="Search" />
+                                    <JFXButton layoutX="229.0" layoutY="435.0" prefHeight="42.0" prefWidth="131.0" style="-fx-background-radius: 10px;" stylesheets="@Button.css" text="Edit" />
+                                    <JFXButton fx:id="DeleteWear" layoutX="500.0" layoutY="435.0" onAction="#deleteWear" prefHeight="42.0" prefWidth="131.0" style="-fx-background-radius: 10px;" stylesheets="@Button.css" text="Delete" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+         </center>
+         <bottom>
+            <AnchorPane prefHeight="35.0" prefWidth="1000.0" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

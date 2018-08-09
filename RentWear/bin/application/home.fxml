@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1350.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.homeController">
+   <children>
+      <AnchorPane id="background" layoutX="10.0" layoutY="10.0" prefHeight="700.0" prefWidth="1350.0" style="-fx-background-color: white;" stylesheets="@home.css">
+         <children>
+            <Label fx:id="lbldate" layoutX="29.0" layoutY="74.0" prefHeight="93.0" prefWidth="282.0">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font></Label>
+            <Label fx:id="lbltime" layoutX="29.0" layoutY="9.0" prefHeight="100.0" prefWidth="521.0">
+               <font>
+                  <Font size="61.0" />
+               </font></Label>
+            <JFXButton fx:id="wearInfo" buttonType="RAISED" layoutX="908.0" layoutY="163.0" onAction="#wearInfo" prefHeight="114.0" prefWidth="337.0" style="-fx-background-radius: 300px;" stylesheets="@home.css" text="Wear Details">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="908.0" layoutY="537.0" prefHeight="113.0" prefWidth="332.0" style="-fx-background-radius: 300px;" stylesheets="@home.css" text="Analyse &amp; Reports">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="rentWear" buttonType="RAISED" layoutX="908.0" layoutY="350.0" onAction="#rentWears" prefHeight="113.0" prefWidth="332.0" style="-fx-background-radius: 300px;" stylesheets="@home.css" text="Purchase Rent">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

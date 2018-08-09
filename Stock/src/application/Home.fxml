@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pan1" prefHeight="700.0" prefWidth="1350.0" stylesheets="@homeBack.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeController">
+   <children>
+      <JFXButton fx:id="Jbtn_analysis" buttonType="RAISED" layoutX="1107.0" layoutY="243.0" onAction="#btn_analysis" prefHeight="170.0" prefWidth="170.0" style="-fx-background-radius: 100px;" stylesheets="@homebtn.css" text="Sales Analysis" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="Jbtn_notification" buttonType="RAISED" layoutX="901.0" layoutY="243.0" onAction="#btn_notification" prefHeight="170.0" prefWidth="170.0" style="-fx-background-radius: 100px;" stylesheets="@homebtn.css" text="Notifiactions" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="Jbtn_orders" buttonType="RAISED" layoutX="478.0" layoutY="243.0" onAction="#btn_orders" prefHeight="170.0" prefWidth="170.0" style="-fx-background-radius: 100px;" stylesheets="@homebtn.css" text="Orders" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="Jbtn_suppliers" buttonType="RAISED" layoutX="689.0" layoutY="243.0" onAction="#btn_suppliers" prefHeight="170.0" prefWidth="170.0" style="-fx-background-radius: 100px;" stylesheets="@homebtn.css" text="Suppliers" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="Jbtn_viewstock" buttonType="RAISED" layoutX="269.0" layoutY="243.0" onAction="#btn_viewstock" prefHeight="170.0" prefWidth="170.0" style="-fx-background-radius: 100px;" stylesheets="@homebtn.css" text="View Stock" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="Jbtn_additems" buttonType="RAISED" layoutX="54.0" layoutY="243.0" onAction="#btn_additems" prefHeight="170.0" prefWidth="170.0" style="-fx-background-radius: 100px;" stylesheets="@homebtn.css" text="AddItems" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="jbtn_logout" layoutX="1239.0" layoutY="14.0" onAction="#logout" text="Logout">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <ImageView fitHeight="207.0" fitWidth="275.0" layoutX="332.0" layoutY="433.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/7.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="715.0" layoutY="669.0" text="Copyright @ www.feeltechlanka.com" textFill="WHITE" />
+      <Label layoutX="1182.0" layoutY="72.0" text="K.T.P.M.Kariyawasam" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="207.0" fitWidth="369.0" layoutX="1069.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/stock2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="222.0" fitWidth="296.0" layoutX="659.0" layoutY="420.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/23.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="218.0" fitWidth="213.0" layoutX="20.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/55.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="Jlbl_date" layoutX="139.0" layoutY="109.0" prefHeight="39.0" prefWidth="151.0">
+         <font>
+            <Font name="Calibri Italic" size="18.0" />
+         </font></Label>
+      <Label fx:id="Jlbl_time" layoutX="139.0" layoutY="154.0" prefHeight="39.0" prefWidth="150.0">
+         <font>
+            <Font name="Calibri Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="109.0" prefHeight="39.0" prefWidth="89.0" text="Date :">
+         <font>
+            <Font name="Calibri Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="154.0" prefHeight="39.0" prefWidth="89.0" text="Time :">
+         <font>
+            <Font name="Calibri Bold Italic" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
